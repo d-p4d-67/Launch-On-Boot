@@ -1,0 +1,55 @@
+name: Publish Russian APK release
+
+on:
+  push:
+    branches: [master]
+    paths: ['.github/workflows/release-ru.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: read
+
+concurrency:
+  group: release-v1.4.0-ru.1
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: d-p4d-67/Launch-On-Boot
+    steps:
+      - name: Download the verified unsigned APK
+        run: gh run download 37764632327 --name Launch-on-Boot-1.4.0-ru.1-unsigned --dir dist
+      - name: Verify exact APK checksum
+        working-directory: dist
+        run: |
+          echo '02e6c77e2ab4085f1124266a632e575fcc328ffde3c2f87c0501fe87c10c9b73  Launch-on-Boot-1.4.0-ru.1-unsigned.apk' | sha256sum --check
+          sha256sum --check SHA256SUMS.txt
+      - name: Publish release
+        run: |
+          cat > release-notes.md <<'NOTES'
+          Русская версия Launch on Boot на основе текущего кода форка jeff2900/Launch-On-Boot.
+
+          Изменения:
+          - Русский перевод перенесён из предоставленной предыдущей версии APK.
+          - Для настроек, которых не было в предыдущей версии, сохранён текущий перевод.
+          - README на русском языке.
+          - Версия приложения: 1.4.0-ru.1, versionCode: 141.
+
+          **APK НЕ ПОДПИСАН.** Для установки на Android TV сначала подпишите файл собственным ключом с помощью apksigner из Android SDK. Неподписанный APK напрямую не устанавливается.
+
+          Сборка завершена успешно. Работа на реальном телевизоре не проверялась. Настройки совместимости исходного проекта сохранены: minSdk 21, targetSdk 34.
+
+          Сборка с вашим ключом не сможет обновить установленное оригинальное приложение, подписанное другим ключом. В таком случае потребуется удалить оригинал; его настройки могут быть потеряны.
+
+          К релизу приложены исходный неподписанный APK и файл SHA256SUMS.txt для проверки целостности.
+          NOTES
+          if gh release view v1.4.0-ru.1 >/dev/null 2>&1; then
+            echo 'Release already exists; leaving it unchanged.'
+            exit 0
+          fi
+          gh release create v1.4.0-ru.1 dist/Launch-on-Boot-1.4.0-ru.1-unsigned.apk dist/SHA256SUMS.txt --target 44729ce42565e555b4299ed67dedca78d859e632 --title "Launch on Boot 1.4.0-ru.1 — русская версия (unsigned)" --notes-file release-notes.md
