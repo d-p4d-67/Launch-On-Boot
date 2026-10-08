@@ -1,0 +1,38 @@
+name: Build unsigned APK
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Install Android SDK packages
+        run: sdkmanager "platforms;android-35" "build-tools;35.0.0"
+      - name: Build unsigned release APK
+        run: bash ./gradlew --no-daemon :app:assembleRelease
+      - name: Prepare APK and checksum
+        run: |
+          mkdir -p dist
+          cp app/build/outputs/apk/release/app-release-unsigned.apk dist/Launch-on-Boot-1.4.0-ru.1-unsigned.apk
+          cd dist
+          sha256sum Launch-on-Boot-1.4.0-ru.1-unsigned.apk > SHA256SUMS.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Launch-on-Boot-1.4.0-ru.1-unsigned
+          path: dist/
+          if-no-files-found: error
+          retention-days: 30
