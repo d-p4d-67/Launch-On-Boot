@@ -1,25 +1,64 @@
-# Quick Links
+# Launch-On-Boot
+
 <img src='https://raw.githubusercontent.com/ITVlab/Launch-On-Boot/master/promo/banner2.png' />
 
 [<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png"
-     alt="Get it on F-Droid"
+     alt="Скачать с F-Droid"
      height="80">](https://f-droid.org/packages/news.androidtv.launchonboot/)
 [<img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png"
-     alt="Get it on Google Play"
+     alt="Скачать из Google Play"
      height="80">](https://play.google.com/store/apps/details?id=news.androidtv.launchonboot)
 
-# Launch-On-Boot
-_Launches a TV app when the device boots_
+## О приложении
 
-On Google TV, there was a way to launch a specific app when the device booted. By default the device would display the TV stream, making the OS feel more like an overlay on top of your television than something completely isolated.
+**Launch-On-Boot** — небольшая утилита для Android TV, которая автоматически запускает выбранное приложение после включения или перезагрузки устройства.
 
-Android TV will simply just display the launcher on a reboot, a small distraction for users expecting to see TV and annoying for individuals using Android TV as a dumb kiosk displaying a single video or stream.
+По умолчанию Android TV после загрузки открывает домашний экран. Это не всегда удобно, особенно если устройство используется как ТВ-приставка, информационный экран, киоск или медиаплеер, где после включения должно сразу запускаться определённое приложение.
 
-This app allows the user to select a specific app to open when the device boots. It's just that simple. Any leanback-enabled app can be opened. Alternatively, the default TV app can be opened, returning you to the channel you just saw.
+Launch-On-Boot позволяет выбрать приложение, которое будет запускаться автоматически после старта устройства. Можно запускать приложения с поддержкой Leanback, приложение для просмотра телеканалов или другое установленное приложение.
 
-Want to make your Android TV act more like a dumb TV? Want to launch Sling TV immediately. You should download this small utility app.
+## Возможности
 
-## Screenshots
+- автоматический запуск выбранного приложения после загрузки Android TV;
+- запуск приложения при выходе устройства из спящего режима;
+- поддержка ТВ-интерфейса Leanback;
+- запуск приложения «Телеканалы» / Live Channels;
+- возможность отображать все установленные приложения;
+- отключение звука устройства при запуске;
+- быстрый тест выбранного приложения;
+- простой интерфейс без лишних настроек;
+- русский интерфейс.
+
+## Как использовать
+
+1. Установите и откройте Launch-On-Boot.
+2. Включите функцию автоматического запуска.
+3. Нажмите **«Выбрать приложение»**.
+4. Выберите приложение, которое должно запускаться автоматически.
+5. При необходимости включите запуск при выходе из спящего режима или другие параметры.
+6. Нажмите **«Проверить»**, чтобы убедиться, что выбранное приложение запускается корректно.
+7. Перезагрузите устройство для проверки автоматического запуска.
+
+## Скриншоты
+
 <img src='promo/LaunchOnBoot-1.png' />
 
 <img src='promo/LaunchOnBoot-2.png' />
+
+## Загрузка
+
+Приложение доступно в:
+
+- [F-Droid](https://f-droid.org/packages/news.androidtv.launchonboot/)
+- [Google Play](https://play.google.com/store/apps/details?id=news.androidtv.launchonboot)
+
+## Исходный проект
+
+Этот репозиторий является форком проекта **Launch-On-Boot**.
+
+Оригинальный проект:
+[jeff2900/Launch-On-Boot](https://github.com/jeff2900/Launch-On-Boot)
+
+## Лицензия
+
+Условия использования и распространения определяются лицензией исходного проекта.
