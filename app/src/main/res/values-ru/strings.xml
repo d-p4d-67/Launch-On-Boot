@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Launch on Boot</string>
+    <string name="credits">Это приложение позволяет настроить запуск выбранного приложения при перезагрузке устройства.\n\nСоздано Interactive TV Lab.\nИсходный код опубликован на GitHub.</string>
+    <string name="null_intent">Не удалось найти приложение для запуска</string>
+    <string name="onboarding_title_welcome">Добро пожаловать в «Launch on Boot»</string>
+    <string name="onboarding_description_welcome">Это краткое руководство поможет вам начать работу.</string>
+    <string name="onboarding_title_what">Как это работает</string>
+    <string name="onboarding_description_what">При включении устройства можно открыть главный экран или сразу запустить нужное приложение.</string>
+    <string name="onboarding_title_tv">Телеканалы</string>
+    <string name="onboarding_description_tv">Можно настроить автоматический запуск любого приложения, включая приложение для просмотра телевидения.</string>
+    <string name="onboarding_title_try">Попробуйте!</string>
+    <string name="onboarding_description_try">Настройка очень проста, а функцию можно отключить в любое время.</string>
+    <string name="notification_text">Ожидание событий</string>
+    <string name="switch_wakeup">Запускать при выходе устройства из спящего режима?</string>
+    <string name="switch_prefer_lb">Предпочитать ТВ-интерфейс (Leanback) приложения?</string>
+    <string name="switch_enable">Включено</string>
+    <string name="switch_live_channels">Запускать ТВ-приложение / телеканалы при загрузке?</string>
+    <string name="button_select_app">Выбрать приложение</string>
+    <string name="button_test">Проверить</string>
+    <string name="switch_show_all">Показывать все приложения</string>
+    <string name="switch_mute">Отключать звук устройства?</string>
+</resources>
