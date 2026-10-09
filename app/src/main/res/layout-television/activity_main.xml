@@ -18,6 +18,7 @@
             android:layout_width="400dp"
             android:foregroundGravity="center_horizontal"
             android:src="@drawable/banner"
+            android:contentDescription="@string/app_name"
             android:id="@+id/app_banner"
             android:layout_height="wrap_content" />
         <TextView
@@ -96,7 +97,7 @@
             android:layout_height="wrap_content" />
         <Button
             android:layout_width="wrap_content"
-            android:text="Test"
+            android:text="@string/button_test"
             android:id="@+id/button_test"
             android:background="@color/colorPrimaryDark"
             android:layout_below="@id/text_package_name"
