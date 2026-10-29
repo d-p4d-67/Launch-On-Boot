@@ -30,7 +30,6 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import static android.view.View.GONE;
-import static news.androidtv.launchonboot.SettingsManagerConstants.ONBOARDING;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = MainActivity.class.getSimpleName();
@@ -68,9 +67,6 @@ public class MainActivity extends AppCompatActivity {
         addOverlay();
     	launcherApplications = getLauncherApps();
         mSettingsManager = new SettingsManager(this);
-        if (!mSettingsManager.getBoolean(ONBOARDING)) {
-            startActivity(new Intent(this, OnboardingActivity.class));
-        }
     }
 
     @Override

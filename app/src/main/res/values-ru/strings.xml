@@ -1,22 +1,14 @@
 <resources>
-    <string name="app_name">Запуск при загрузке</string>
-    <string name="credits">Это приложение позволяет пользователям настроить конкретное приложение для запуска всякий раз, когда устройство перезагружается.\n\nСозданные интерактивные Tv Lab.\nС открытым исходным кодом на GitHub.</string>
-    <string name="null_intent">Не удается найти действие для запуска</string>
-    <string name="onboarding_title_welcome">Добро пожаловать!!!</string>
-    <string name="onboarding_description_welcome">Это краткое руководство поможет вам начать работу.</string>
-    <string name="onboarding_title_what">Как это работает</string>
-    <string name="onboarding_description_what">Когда вы включите устройство, Вы можете открыть данную программу или сразу же открыть приложение, которое вы добавили в авто-запуск.</string>
-    <string name="onboarding_title_tv">Live Channels</string>
-    <string name="onboarding_description_tv">Приложения может быть настроено для открытия любого приложения, включая воспроизведение TV прямо сейчас</string>
-    <string name="onboarding_title_try">Попробуйте!</string>
-    <string name="onboarding_description_try">Вы можете выключить его в любое время.</string>
-    <string name="notification_text">Ожидание...</string>
-    <string name="switch_wakeup">Запустить,когда устройство проснется?</string>
-    <string name="switch_prefer_lb">Предпочитать ТВ-интерфейс (Leanback) приложения?</string>
-    <string name="switch_enable">Выкл/вкл</string>
-    <string name="switch_live_channels">Запустить ТВ-приложение при загрузке?</string>
-    <string name="button_select_app">Выберите приложение</string>
-    <string name="button_test">Тест...</string>
+    <string name="app_name">Автозапуск</string>
+    <string name="credits">Автоматически запускает выбранное приложение после включения или перезагрузки устройства.\n\nРазработано Interactive TV Lab.\nИсходный код доступен на GitHub.</string>
+    <string name="null_intent">Не удалось найти приложение для запуска</string>
+    <string name="notification_text">Ожидание включения устройства</string>
+    <string name="switch_wakeup">Запускать при выходе из спящего режима</string>
+    <string name="switch_prefer_lb">Использовать ТВ-интерфейс приложения</string>
+    <string name="switch_enable">Автозапуск включён</string>
+    <string name="switch_live_channels">Запускать приложение «Телеканалы» при загрузке</string>
+    <string name="button_select_app">Выбрать приложение</string>
+    <string name="button_test">Проверить</string>
     <string name="switch_show_all">Показывать все приложения</string>
-    <string name="switch_mute">Отключать звук устройства?</string>
+    <string name="switch_mute">Отключать звук устройства</string>
 </resources>
