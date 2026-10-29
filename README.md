@@ -1,6 +1,6 @@
 # Launch-On-Boot
 
-<img src='https://raw.githubusercontent.com/ITVlab/Launch-On-Boot/master/promo/banner_RU.png' />
+<img src='https://raw.githubusercontent.com/d-p4d-67/Launch-On-Boot/refs/heads/master/promo/banner_RU.png' />
 
 [<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png"
      alt="Скачать с F-Droid"
