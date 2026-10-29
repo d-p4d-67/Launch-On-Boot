@@ -2,12 +2,6 @@
 
 <img src='https://raw.githubusercontent.com/d-p4d-67/Launch-On-Boot/refs/heads/master/promo/banner_RU.png' />
 
-[<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png"
-     alt="Скачать с F-Droid"
-     height="80">](https://f-droid.org/packages/news.androidtv.launchonboot/)
-[<img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png"
-     alt="Скачать из Google Play"
-     height="80">](https://play.google.com/store/apps/details?id=news.androidtv.launchonboot)
 
 ## О приложении
 
@@ -49,8 +43,7 @@ Launch-On-Boot позволяет выбрать приложение, кото�
 
 Приложение доступно в:
 
-- [F-Droid](https://f-droid.org/packages/news.androidtv.launchonboot/)
-- [Google Play](https://play.google.com/store/apps/details?id=news.androidtv.launchonboot)
+- [Releases](https://github.com/d-p4d-67/Launch-On-Boot/releases)
 
 ## Исходный проект
 
