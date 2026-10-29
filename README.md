@@ -45,6 +45,15 @@ Launch-On-Boot позволяет выбрать приложение, кото�
 
 - [Releases](https://github.com/d-p4d-67/Launch-On-Boot/releases)
 
+## Проверка безопасности
+
+APK проверен сервисом VirusTotal.
+
+🔍 [Посмотреть результаты проверки](https://www.virustotal.com/gui/file/875898602479b9b537e7dd37588387b415fd6f58e0b23f7a996648fdc163fb81)
+
+**SHA-256:**
+`875898602479b9b537e7dd37588387b415fd6f58e0b23f7a996648fdc163fb81`
+
 ## Исходный проект
 
 Этот репозиторий является форком проекта **Launch-On-Boot**.
