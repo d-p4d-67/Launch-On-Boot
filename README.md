@@ -41,9 +41,9 @@ Launch-On-Boot позволяет выбрать приложение, кото�
 
 ## Скриншоты
 
-<img src='promo/LaunchOnBoot-1.png' />
+<img src='promo/LaunchOnBoot-1_RU.png' />
 
-<img src='promo/LaunchOnBoot-2.png' />
+<img src='promo/LaunchOnBoot-2_RU.png' />
 
 ## Загрузка
 
