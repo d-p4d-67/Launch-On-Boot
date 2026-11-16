@@ -2,6 +2,8 @@ name: Build unsigned APK
 
 on:
   push:
+    branches: [master, russian-ui]
+  pull_request:
     branches: [master]
   workflow_dispatch:
 
@@ -28,12 +30,12 @@ jobs:
       - name: Prepare APK and checksum
         run: |
           mkdir -p dist
-          cp app/build/outputs/apk/release/app-release-unsigned.apk dist/Launch-on-Boot-1.4.0-ru.1-unsigned.apk
+          cp app/build/outputs/apk/release/app-release-unsigned.apk dist/Launch-on-Boot-1.4.0-ru.2-unsigned.apk
           cd dist
-          sha256sum Launch-on-Boot-1.4.0-ru.1-unsigned.apk > SHA256SUMS.txt
+          sha256sum Launch-on-Boot-1.4.0-ru.2-unsigned.apk > SHA256SUMS.txt
       - uses: actions/upload-artifact@v4
         with:
-          name: Launch-on-Boot-1.4.0-ru.1-unsigned
+          name: Launch-on-Boot-1.4.0-ru.2-unsigned
           path: dist/
           if-no-files-found: error
           retention-days: 30

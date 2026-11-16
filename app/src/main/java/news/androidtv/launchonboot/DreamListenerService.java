@@ -13,7 +13,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.ServiceInfo;
-import android.graphics.BitmapFactory;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.IBinder;
 import android.util.Log;
@@ -63,8 +65,8 @@ public class DreamListenerService extends Service {
             notification = new Notification.Builder(this,channelId)
                     .setContentTitle(getText(R.string.app_name))
                     .setContentText(getText(R.string.notification_text))
-                    .setSmallIcon(R.mipmap.ic_launcher)
-                    .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.drawable.banner))
+                    .setSmallIcon(R.drawable.ic_notification)
+                    .setLargeIcon(getBannerBitmap())
                     .setContentIntent(pendingIntent)
                     .setCategory(Notification.CATEGORY_SERVICE)
                     .setPriority(Notification.PRIORITY_MIN)
@@ -73,8 +75,8 @@ public class DreamListenerService extends Service {
             notification = new Notification.Builder(this)
                     .setContentTitle(getText(R.string.app_name))
                     .setContentText(getText(R.string.notification_text))
-                    .setSmallIcon(R.mipmap.ic_launcher)
-                    .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.drawable.banner))
+                    .setSmallIcon(R.drawable.ic_notification)
+                    .setLargeIcon(getBannerBitmap())
                     .setContentIntent(pendingIntent)
                     .setCategory(Notification.CATEGORY_SERVICE)
                     .setPriority(Notification.PRIORITY_MIN)
@@ -92,6 +94,14 @@ public class DreamListenerService extends Service {
         // Register listeners.
         IntentFilter filter = new IntentFilter(Intent.ACTION_DREAMING_STOPPED);
         registerReceiver(dreamHandler, filter);
+    }
+
+    private Bitmap getBannerBitmap() {
+        Drawable banner = getDrawable(R.drawable.banner);
+        Bitmap bitmap = Bitmap.createBitmap(320, 180, Bitmap.Config.ARGB_8888);
+        banner.setBounds(0, 0, 320, 180);
+        banner.draw(new Canvas(bitmap));
+        return bitmap;
     }
 
     @Override
